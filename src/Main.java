@@ -58,7 +58,10 @@ public class Main {
         installApp(2013, 1);
         //task 3
         System.out.println("task 3");
-        System.out.println("Потребуется дней: " + countDeliveryDays(100));
+        countDeliveryDays(101);
+
+
+
 
     }
 }
