@@ -28,21 +28,18 @@ public class Main {
     }
 
     public static int countDeliveryDays(int distance) {
-        int days;
         if (distance <= 20) {
-            days = 1;
+            return 1;
         }
         else if (distance > 20 && distance <= 60) {
-            days = 2;
+            return 2;
         }
         else if (distance > 60 && distance <= 100) {
-            days = 3;
-        } else {
-            System.out.println("Доставки нет");
+            return 3;
         }
         return -1;
-    }
 
+    }
 
     public static void main(String[] args) {
         //task 1
@@ -58,9 +55,13 @@ public class Main {
         installApp(2013, 1);
         //task 3
         System.out.println("task 3");
-        countDeliveryDays(101);
 
-
+        int days = countDeliveryDays(101);
+        if (days == -1) {
+            System.out.println("Доставки нет");
+        } else {
+            System.out.println("Количество дней доставки " + days);
+        }
 
 
     }
